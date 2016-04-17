@@ -5,19 +5,20 @@ SAR Graph is an free online tool to view the performance of a Linux server using
 
 ## How to Use
 The steps involved in generating the SARchart are as follows:
+
 1. Create a SAR output as a text file from the Unix server.
-  + Login as root or with sudo access run the following commands to fetch the sar output for a specific date. Example: 
-```shell
-# sar -A -f /var/log/sa/sa19 > /tmp/sa19_$(hostname).txt
-# chmod 755 /tmp/sa19_$(hostname).txt
-```
+  + Login as root or with sudo access run the following commands to fetch the sar output for a specific date. Example:
+  ```shell
+  # sar -A -f /var/log/sa/sa19 > /tmp/sa19_$(hostname).txt
+  # chmod 755 /tmp/sa19_$(hostname).txt
+  ```
 2. Download the SAR text file to the desktop
   + Use any SCP software like Winscp or pscp to download the file from the server. I prefer pscp command to download the files from Unix server to the desktop. Example:
-```batch
-C:\> pscp suresh@servername:/tmp/sa19_hostname.txt .
-```
+  ```batch
+  C:\> pscp suresh@servername:/tmp/sa19_hostname.txt .
+  ```
 3. Upload the SAR text file to this site.
-  + Navigate on to the [SAR Graph](sargraph.github.io). Just click on Upload button to upload the file to the site.
+  + Navigate on to the [SAR Graph](https://sargraph.github.io). Just click on Upload button to upload the file to the site.
 4. The site will create all the charts.
   + That's all folks! the charts are ready for viewing. Kindly star my repository if you found this interesting.
 
@@ -50,5 +51,5 @@ Currently the report includes the following
 [SAR Chart](http://sarchart.weebly.com)
 
 ## Author
-Suresh Raju
+Suresh Raju<br>
 copyright 2016
