@@ -1,10 +1,10 @@
 ## SAR (System Activity Report) Graph
 An Online/Offline Tool to view the SAR output in graphical charts.
 
-SAR Graph is an online tool to view the performance of a Linux server using the SAR (System Activity Report) output in an impressive graphical chart layout. The tool helps you view the output of CPU, Memory, Load, Run Queue, Swap usage etc. of a server in graphical layout.
+SAR Graph is an online tool to view the performance of a Linux server using the SAR (System Activity Report) output in an impressive graphical chart layout. The tool helps you view the output of CPU, Memory, Load, Run Queue, Swap usage, Processes, Contexts, Interrupts, Paging, NFS, Sockets etc. of a server in graphical layout.
 
 ## How to Use
-The steps involved in generating the SARchart are as follows:
+The steps involved in generating the SAR Graph are as follows:
 
 1. Create a SAR output as a text file from the Unix server.
   + Login as root or with sudo access run the following commands to fetch the sar output for a specific date. Example:
@@ -15,7 +15,7 @@ The steps involved in generating the SARchart are as follows:
 2. Download the SAR text file to the desktop
   + Use any SCP software like Winscp or pscp to download the file from the server. I prefer pscp command to download the files from Unix server to the desktop. Example:
   ```batch
-  C:\> pscp suresh@servername:/tmp/sa19_hostname.txt .
+  C:\> pscp suresh@hostname143:/tmp/sa19_hostname143.txt .
   ```
 3. Upload the SAR text file to this site.
   + Navigate on to the [SAR Graph](https://sargraph.github.io). Just click on Upload button to upload the file to the site.
@@ -46,6 +46,7 @@ Currently the report includes the following
 
 ## OS Platform supported
 + Currently the output is tested in the following OS: Linux
++ Planning to include Solaris OS in future
 
 ## Website Links
 [SAR Chart](http://sarchart.weebly.com)
