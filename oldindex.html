@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+
+<head>
+    <title>angular-lte demo</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/ui-router-core.min.js"></script>
+    <script src="js/ui-router-angularjs.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/ui-bootstrap-tpls.js"></script>
+    <script src="lib/angular-lte.min.js"></script>
+    <script src="lib/angular-lte.templates.js"></script>
+    <script src="demo.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/AdminLTE.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/skin-blue.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+</head>
+
+<body class="skin-blue sidebar-mini" lte-body>
+    <div class="wrapper" lte-wrapper>
+        <header class="main-header">
+            <a href="#" class="logo">
+                <span class="logo-mini">
+<!--                    <b>S</b>AR-->
+                    <img src="img/sar51.png" height=38 width=38>
+                </span>
+                <span class="logo-lg" style="float:left">
+                    <img src="img/sar51.png" height=30 width=30><span style="color:#07C8FA">&nbsp;SAR</span><span style="color:#CEEFEF">chart</span>
+<!--                    <b>SAR</b>chart-->
+                </span>
+            </a>
+            <nav class="navbar navbar-static-top">
+                <lte-sidebar-toggle></lte-sidebar-toggle>
+
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+
+                        <li class="dropdown user user-menu" uib-dropdown>
+                            <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
+                                <img src="img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                <span class="hidden-xs">Suresh Raju</span>
+                            </a>
+                            <ul class="dropdown-menu" uib-dropdown-menu>
+                                <li class="user-header">
+                                    <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <p>
+                                        Suresh Raju - Web Developer
+                                        <small>Member since Nov. 2012</small>
+                                    </p>
+                                </li>
+                                <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Followers</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Sales</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Friends</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-gears"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="main-sidebar">
+            <sidebar></sidebar>
+        </aside>
+        <div class="content-wrapper" lte-content-wrapper>
+            <ui-view></ui-view>
+        </div>
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.4.0
+            </div>
+            <strong>Copyright © 2016-2018
+                <a href="https://adminlte.io">Suresh Raju</a>.</strong> All rights reserved.
+        </footer>
+    </div>
+</body>
+
+</html>
