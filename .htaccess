@@ -1,0 +1,2 @@
+RewriteCond %{HTTP_HOST} ^sargraph.github.io
+RewriteRule ^(.*) https://sarchart.dotsuresh.com [P]
