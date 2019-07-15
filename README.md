@@ -14,13 +14,10 @@ The steps involved in generating the SAR Graph are as follows:
   ```shell
   sar -A -f /var/log/sa/sa19 > /tmp/sa19_$(hostname).txt
   chmod 755 /tmp/sa19_$(hostname).txt
-  ```
-  + For multiple days files:
-  ```
+  # Generate file for multiple days files:
   ls /var/log/sa/sa?? | xargs -i sar -A -f {} > /tmp/sar_$(uname -n).txt
   chmod 755 /tmp/sar_$(uname -n).txt
   ```
-
 2. Download the SAR text file to the desktop
   + Use any SCP software like Winscp or pscp to download the file from the server. I prefer pscp command to download the files from Unix server to the desktop. Example:
   ```batch
