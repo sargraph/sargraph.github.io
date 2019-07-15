@@ -1,7 +1,8 @@
 ## SAR (System Activity Report) Graph
 An Online/Offline Tool to view the SAR output in graphical charts.
 
-SAR Graph is an online tool to view the performance of a Linux server using the SAR (System Activity Report) output in an impressive graphical chart layout. The tool helps you view the output of CPU, Memory, Load, Run Queue, Swap usage, Processes, Contexts, Interrupts, Paging, NFS, Sockets etc. of a server in graphical layout.
+SARchart is an online tool to view the performance of a Linux server using the SAR (System Activity Report) output in an impressive graphical chart layout. This tool displays graphs for multiple days to a server. Also provides information of Peak CPU/Load/Memory/IO in the dashboard. The tool helps you view the charts on CPU, Memory, Load, Run Queue, Swap usage, Processes, Contexts, Interrupts, Paging, NFS, Sockets etc. of a server in graphical layout. 
+Note: Currently this works only for Linux/AIX OS
 
 ![](assets/sargraph-samples.gif)
 
@@ -14,6 +15,12 @@ The steps involved in generating the SAR Graph are as follows:
   sar -A -f /var/log/sa/sa19 > /tmp/sa19_$(hostname).txt
   chmod 755 /tmp/sa19_$(hostname).txt
   ```
+  + For multiple days files:
+  ```
+  ls /var/log/sa/sa?? | xargs -i sar -A -f {} > /tmp/sar_$(uname -n).txt
+  chmod 755 /tmp/sar_$(uname -n).txt
+  ```
+
 2. Download the SAR text file to the desktop
   + Use any SCP software like Winscp or pscp to download the file from the server. I prefer pscp command to download the files from Unix server to the desktop. Example:
   ```batch
@@ -24,6 +31,15 @@ The steps involved in generating the SAR Graph are as follows:
 4. The site will create all the charts.
   + That's all folks! the charts are ready for viewing. 
   + Kindly star this repository if you found this interesting.
+  
+## New Features
++ SAR chart will plot the values of multiple days for a server.
++ Uses only JavaScript to plot the charts/graphs.
++ Client side interface. So does not save any information.
++ No need to install any package in the server
++ Works with AM/PM and 24 Hour format also.
++ Improved designs and buttons
++ Can export graph reports
 
 ## SAR Reports
 Currently the report includes the following
@@ -48,7 +64,7 @@ Currently the report includes the following
 + No additional packages required to be installed in the server
 
 ## OS Platform supported
-+ Currently the output is tested in the following OS: Linux
++ Currently the output is tested in the following OS: Linux, AIX
 + Planning to include other OS in future
 
 ## Website Links
