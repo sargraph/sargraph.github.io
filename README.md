@@ -1,4 +1,4 @@
-## SAR (System Activity Report) Graph [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
+## SAR (System Activity Report) Graph [![HitCount](http://hits.dwyl.com/sargraph/sargraphgithubio.svg)](http://hits.dwyl.com/sargraph/sargraphgithubio)(https://github.com/dwyl/goodparts "JavaScript The Good Parts")
 An Online/Offline Tool to view the SAR output in graphical charts.
 
 SARchart is an online tool to view the performance of a Linux server using the SAR (System Activity Report) output in an impressive graphical chart layout. This tool displays graphs for multiple days to a server. Also provides information of Peak CPU/Load/Memory/IO in the dashboard. The tool helps you view the charts on CPU, Memory, Load, Run Queue, Swap usage, Processes, Contexts, Interrupts, Paging, NFS, Sockets etc. of a server in graphical layout. 
