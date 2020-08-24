@@ -16,6 +16,7 @@ This tool displays graphs for single day or multiple days to a server. Also prov
 ### Input
 This tool expects the input of SAR extracts from the Unix/Linux servers. The SAR extracts depends on the sysstat package.
 
+### Sample Generated charts
 ![](assets/sargraph-samples.gif)
 
 ### Features
@@ -57,7 +58,7 @@ The steps involved in generating the SAR Graph are as follows:
   sar -A -f /var/log/sysstat/sa23 > /tmp/sa23_$(uname -n).txt
   # Generate file for multiple days files:
   ls /var/log/sysstat/sa?? | xargs -i sar -A -f {} > /tmp/sar_$(uname -n).txt
-    ```
+  ```
 2. Download the SAR text file to the desktop
   + Use any SCP software like Winscp or pscp to download the file from the server. I prefer pscp command to download the files from Unix server to the desktop. Example:
   ```batch
