@@ -1,4 +1,4 @@
-## SARchart / SARgraph (System Activity Report chart/Graph) [![HitCount](http://hits.dwyl.com/sargraph/sargraphgithubio.svg)](http://hits.dwyl.com/sargraph/sargraphgithubio)
+## SARchart / SARgraph (System Activity Report chart/graph) [![HitCount](http://hits.dwyl.com/sargraph/sargraphgithubio.svg)](http://hits.dwyl.com/sargraph/sargraphgithubio)
 An Online/Offline Tool to view the SAR output in graphical charts.
 
 ### What is SARchart
@@ -31,7 +31,7 @@ This tool displays the SAR file output into an impressive graphical chart layout
 This tool can plot the charts for single day input as well as multiple days input to a server.
 
 + Export Charts
-This tool allows you to generate and download charts. This feature is not available in this standalone version. Please use the online version in the website (https://sarchart.dotsuresh.com).
+This tool allows you to generate and download charts. This feature is not available in this standalone version. Please use the online version in the [website](https://sarchart.dotsuresh.com).
 
 
 ### How to use the tool
@@ -65,7 +65,7 @@ The steps involved in generating the SAR Graph are as follows:
   pscp suresh@hostname143:/tmp/sa19_hostname143.txt .
   ```
 3. Upload the SAR text file to this site.
-  + Navigate on to the [SAR Graph](https://sarchart.dotsuresh.com). Just click or drag your file to the upload section of the site.
+  + Navigate on to the [SARchart](https://sarchart.dotsuresh.com). Just click or drag your file to the upload section of the site.
 4. The site will create all the charts.
   + That's all folks! the charts are ready for viewing. 
   + Kindly star this repository if you found this interesting.
@@ -75,7 +75,7 @@ The steps involved in generating the SAR Graph are as follows:
 + Planning to include other OS in future
 
 ## Website Links
-[SAR Chart](http://sarchart.dotsuresh.com)
+[SAR Chart](https://sarchart.dotsuresh.com)
 
 ## Author
 [Suresh Raju](https://dotsuresh.com)<br>
