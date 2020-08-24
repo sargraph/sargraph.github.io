@@ -1,4 +1,4 @@
-## SARchart / SARgraph (System Activity Report chart/graph) [![HitCount](http://hits.dwyl.com/sargraph/sargraphgithubio.svg)](http://hits.dwyl.com/sargraph/sargraphgithubio)
+## SARchart / SARgraph (System Activity Report chart/graph) ![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fsargraph%2Fsargraph.github.io%2Fhit-counter)
 An Online/Offline Tool to view the SAR output in graphical charts.
 
 ### What is SARchart
