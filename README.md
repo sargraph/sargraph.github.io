@@ -17,7 +17,7 @@ This tool displays graphs for single day or multiple days to a server. Also prov
 This tool expects the input of SAR extracts from the Unix/Linux servers. The SAR extracts depends on the sysstat package.
 
 ### Sample Generated charts
-![](assets/sargraph-samples.gif)
+![](public/images/sargraph-samples.gif)
 
 ### Features
 
