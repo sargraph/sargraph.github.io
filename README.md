@@ -76,9 +76,9 @@ The steps involved in generating the SAR Graph are as follows:
 
 ## How to run this offline
 - Clone/Download this repository
-- Optionally, setup database on mlab or localhost. Edit `.env.sample` file to `.env` and add your config. It will still work with out this step.
 - Run `npm install`
 - `npm start` to run or `npm run dev` to run nodemon
+- The site will be avaiable on default port 3000. http://localhost:3000/
 - Enjoy!
 
 ## Website Links
