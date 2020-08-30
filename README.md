@@ -78,7 +78,7 @@ The steps involved in generating the SAR Graph are as follows:
 - Clone/Download this repository
 - Run `npm install`
 - `npm start` to run or `npm run dev` to run nodemon
-- The site will be avaiable on default port 3000. http://localhost:3000/
+- The site will be available on default port 3000. http://localhost:3000/
 - Enjoy!
 
 ## Website Links
