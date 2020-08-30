@@ -1,6 +1,7 @@
-## SARchart / SARgraph (System Activity Report chart/graph) ![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fsargraph%2Fsargraph.github.io%2Fhit-counter)
-[![Build Status](https://travis-ci.com/sargraph/sargraph.github.io.svg?branch=master)](https://travis-ci.com/sargraph/sargraph.github.io)
-An Online/Offline Tool to view the SAR output in graphical charts.
+## SARchart / SARgraph (System Activity Report chart/graph) 
+![Hits](https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fgithub.com%2Fsargraph%2Fsargraph.github.io%2Fhit-counter) [![Build Status](https://travis-ci.com/sargraph/sargraph.github.io.svg?branch=master)](https://travis-ci.com/sargraph/sargraph.github.io)
+
+An Online/Offline Tool to view the server's SAR data as charts.
 
 ### What is SARchart
 SARchart is an online tool to view the performance of a Linux server using the SAR (System Activity Report) output in an impressive graphical chart layout. 
