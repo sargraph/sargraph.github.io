@@ -74,6 +74,13 @@ The steps involved in generating the SAR Graph are as follows:
 + Currently the output is tested in the following OS: Linux (RHEL/SuSE/Ubuntu), AIX, Solaris
 + Planning to include other OS in future
 
+## How to run this offline
+- Clone/Download this repository
+- Optionally, setup database on mlab or localhost. Edit `.env.sample` file to `.env` and add your config. It will still work with out this step.
+- Run `npm install`
+- `npm start` to run or `npm run dev` to run nodemon
+- Enjoy!
+
 ## Website Links
 [SAR Chart](https://sarchart.dotsuresh.com)
 

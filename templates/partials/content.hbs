@@ -1,0 +1,660 @@
+ <div id="content" class="scrolling" style="overflow-y: scroll;">
+
+        <section class="container-fluid">
+          <div class="row mb-3">
+            <span class="custom-menu">
+              <button type="button" id="sidebarCollapse" class="sidebar-toggle collapse">
+                  <i class="fa fa-bars"></i>
+              </button>
+            </span>
+            <div class="d-flex flex-row align-items-center mx-auto">
+              <div class="container1 d-flex flex-row justify-content-between1 align-items-center flex-wrap mt-3">
+                <a href="" class="animate__animated animate__flipInX animate__delay-1s btn btn-app export d-flex flex-column dash-btn" id="btnReset"> <i class="fa fa-sync-alt"></i>Reset </a>
+                <a href="#" class="animate__animated animate__flipInX animate__delay-1s btn btn-app export d-flex flex-column dash-btn hide" id="btnDBGo"> <i class="fa fa-heartbeat"></i>Dashboard </a>
+
+                <a href="http://sarchart.dotsuresh.com/files/sa28_hostname345.txt" target="_blank" class="animate__animated animate__flipInX animate__delay-1s btn btn-app export d-flex flex-column dash-btn" id="btnReset"> 
+                  <i class="fa fa-file-download"></i>Sample File</a>
+                <a href="#_howto" class="animate__animated animate__flipInX animate__delay-1s btn btn-app export d-flex flex-column dash-btn" id="btnDBGo"> <i class="fa fa-plus-square"></i>How To </a>
+                <a href="#_faq" class="animate__animated animate__flipInX animate__delay-1s btn btn-app export d-flex flex-column dash-btn" id="btnDBGo"> <i class="fa fa-question-circle"></i>FAQ </a>
+                <a href="https://github.com/sargraph/sargraph.github.io" target="_blank" class="animate__animated animate__flipInX animate__delay-1s btn btn-app export d-flex flex-column dash-btn" id="btnGithub"> <i class="fab fa-github"></i> Github </a>
+                <a href="https://dotsuresh.com/#contact" target="_blank" class="js-open btn-open is-active animate__animated animate__flipInX animate__delay-1s btn btn-app export d-flex flex-column dash-btn" id="btnContactUs"> <i class="fa fa-envelope"></i> Contact us </a>
+              </div>
+            </div>          
+          </div>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex flex-nowrap align-items-center mx-auto text-center" style="min-width:320px;margin-top: 0px;border: 0px solid grey">
+
+                <h1 id="logo-header" style="border:0px solid #ccc;">
+                  <img style="margin-top:-5px;" width=80 height=80 src="/images/sarchart-logo17.png">
+                  <b style="margin-left:-32px;font-family:Limelight;font-size:48px;font-weight:400;text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0px -4px 10px rgba(255,255,255,0.3);"
+                    class="shadow-white1">AR</b><span style="text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0px -4px 10px rgba(255,255,255,0.3);">chart</span>
+                </h1>
+                <span style="margin-top: -25px; color: #ddd; font-family: Metrophobic;">Tool to view Unix SAR data as Charts</span>
+              </div>
+              <div
+                class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex1 flex-row1 justify-contents-between text-right flex-nowrap align-items-right vertical-align-center"
+                style="min-width:320px;border: 0px solid grey">
+
+
+              </div>
+            </div>
+
+  
+
+
+          <div class="row mt-3 remove animate__animated animate__slideInRight animate__delay-1s" id="peakBlock">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-3 homeContBlock">
+              <div class="small-box bg-aqua contDash animate__animated animate__flipInX animate__delay-1s">
+                <div class="inner">
+                  <h3 class="shadow-white"><i class="fa fa-microchip shadow-black"></i> <span id=peakCPU>&nbsp;</span><sup class="shadow-white" style="font-size: 20px">%</sup></h3>
+                  <p class="shadow-white" style='font-weight: 1000;font-size:18px;'>Peak CPU</p>
+                </div>
+                <div class="icon">
+                  <div id="peakCPUChart" class="bg-aqua1" style="margin-top: 15px;width: 100px; height: 100px;"></div>
+                </div>
+                <a href="#" class="small-box-footer" id=btnCPUArrow><span class=shadow-black>at</span> <span class=shadow-black id=peakCPUTime>&nbsp;</span> <i class="fa fa-arrow-circle-right shadow-black"></i></a>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-3 homeContBlock">
+              <div class="small-box bg-green contDash animate__animated animate__flipInX animate__delay-1s">
+                <div class="inner">
+                  <h3 class="shadow-white"><i class="fa fa-truck shadow-black"></i> <span id=peakLoad>&nbsp;</span><sup class="shadow-white" style="font-size: 20px">%</sup></h3>    
+                  <p class="shadow-white" style='font-weight: 1000;font-size:18px;'>Peak Load</p>
+                </div>
+                <div class="icon">
+                  <div id="peakLoadChart" class="bg-green1" style="margin-top: 15px;width: 100px; height: 100px; "></div>
+                </div>
+                <a href="#" class="small-box-footer" id=btnLoadArrow><span class=shadow-black>at</span> <span class=shadow-black id=peakLoadTime>&nbsp;</span> <i class="fa fa-arrow-circle-right shadow-black"></i></a>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 pb-3 homeContBlock">
+              <div class="small-box bg-yellow contDash animate__animated animate__flipInX animate__delay-1s">
+                <div class="inner">
+                  <h3 class="shadow-white"><i class="fa fa-bolt shadow-black"></i> <span id=peakMemory></span><sup class="shadow-white" style="font-size: 20px">%</sup></h3>
+                  <p class="shadow-white" style='font-weight: 1000;font-size:18px;'>Peak Memory</p>
+                </div>
+                <div class="icon flex-grow-1">
+                  <div id="peakMemoryChart" class="bg-yellow1" style="margin-top: 15px;width: 100px; height: 100px; "></div>
+                </div>
+                <a href="#" class="small-box-footer" id=btnMemoryArrow><span class=shadow-black>at</span> <span class=shadow-black id=peakMemoryTime>&nbsp;</span> <i class="fa fa-arrow-circle-right shadow-black"></i></a>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+          
+        <!-- Begin File Upload box -->
+        <div class="row mx-0 px-0">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 homeContBlock">
+            <div class="card1 card-blur1 card-primary roundborder">
+              <div class="card-header1 with-border d-flex flex-row justify-content-between flex-wrap align-items-center"> </div>
+              <div class="card-body1">
+                <span class="card-text text-white">
+                </span>
+                <br />
+
+                <div class="gradient-border1">
+                <div id="start" class="form-container uploader sar-file-uploader">
+                    <i class="fa fa-file-upload" aria-hidden="true" style="font-size:3em;color: #ddd; -webkit-animation1:light-color-change 10s infinite alternate;"></i>
+                    <p style="font-family: 'Metrophobic';font-size:1em;color: #eee">Drag files here or click to upload<br><span style="font-style: italics;color: #ccc;
+                      text-shadow: #0c2b31 1px 1px 0;font-size: 0.7em;">The SAR input file should be in '.txt' format</span></p>
+                    <span class="button-wrapper">
+                      <span id="file-upload-btn" class="btn uploadBtn"> 
+                        <i class="fa fa-file-upload1" aria-hidden="true" style="color: #3393a7;"></i> Browse and upload
+                      </span>
+                    </span>
+                      <br>
+                    <span class="fileinput-filename" style="font-size: 0.9rem;color: pink"></span>
+                </div>
+                </div>
+
+                <div class="d-block hide" id="spinner">
+                  <span id="spinnerVal">
+                  </span>
+                  <div class="loader">
+                    <div class="loader">
+                        <div class="loader">
+                        </div>
+                    </div>
+                  </div>
+                </div> 
+
+                <div class="output"></div>
+
+            
+              </div>
+            </div>
+          </div>
+          
+          <!-- Begin Server Info box -->
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 homeContBlock w-100">
+            <div class="card1 card-blur1 card-primary contDash1">
+              <div class="card-header1 with-border d-flex flex-row justify-content-between flex-wrap align-items-center">
+              </div>
+              <div class="card-body1" id="homeContainer1" style="font-weight: 400;font-size:10pt; color: #eee;">
+
+                  <div id="homeCarousel" class="carousel slide carousel-fade mt-3 pt-2" data-ride="carousel" data-interval="7000">
+                    <!-- Carousel indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#homeCarousel" data-slide-to="1"></li>
+                      <li data-target="#homeCarousel" data-slide-to="2"></li>
+                    </ol>   
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                      <div class="item carousel-item active">
+                        <div class="row mx-1">
+                          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 w-100">
+                            <div class="banner d-flex justify-content-between flex-wrap">
+                              <div class="gradient-border1">                                
+                                <div class="msg mx-3 my-3 animate1__animated animate__flipInX animate__delay-1s" style="border: 0px solid #ccc;">
+                                  <span class="homeContainer animate__animated animate__flipInX animate__delay-1s"><span style="background-color: rgba(0,0,0,.3);padding:1px 20px;border-radius: 5rem 0;">Welcome to SARchart</span><br>SARchart is an online tool to view the performance of a Unix server using the SAR output in an impressive graphical chart layout.<br>
+                                    Currently supports Linux, AIX and Solaris. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>			
+                      </div>
+                      
+                      <div class="item carousel-item">
+                        <div class="row mx-1">
+                          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 w-100">
+                            <div class="banner d-flex justify-content-between flex-wrap">
+                              <div class="msg mx-3 my-3 animate__animated animate__flipInX animate__delay-1s" style="border: 0px solid #ccc;">
+                                <span class="homeContainer align-items-center text-left mx-3">
+                                  This tool provides the following features:
+                                  <ul>
+                                    <li>Tool runs only on Client browser</li>
+                                    <li>Stunning charts</li>
+                                    <li>Fast and accurate results</li>
+                                    <li>Export Charts as PDF report (not available in this version)</li>
+                                  </ul><br>
+                              </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>			
+                      </div>
+                      <div class="item carousel-item">
+                        <div class="row mx-1">
+                          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 w-100">
+                            <div class="banner d-flex justify-content-between flex-wrap">
+                              <div class="msg mx-3 my-3 animate__animated animate__flipInX animate__delay-1s mx-auto align-items-center" style="border: 0px solid #ccc;">
+                                <span class="homeContainer animate__animated animate__flipInX animate__delay-1s"><span style="background-color: rgba(0,0,0,.3);padding:1px 20px;border-radius: 5rem 0;">How to generate the charts</span><br>
+                                <br>Just upload the SAR file and the tool will do the rest.<br>
+                                  <a href="#_howto" style='font-size: .8rem; padding: 2px; background-color: rgba(0,0,0,.3);'>Learn more</a>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>			
+                      </div>
+                    </div>
+                    <!-- Carousel controls -->
+                    <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+                      <i class="fa fa-chevron-left"></i>
+                    </a>
+                    <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+                      <i class="fa fa-chevron-right"></i>
+                    </a>
+                  </div>
+            
+              </div>
+
+
+
+            </div>  
+          </div>        
+        </div>
+
+
+
+        <div class="row equal py-0 mt-2 mx-1 section-header homeContBlock">
+          <div class="col-lg-12 text-center my-0 py-0">
+            <h4 class="my-0 py-0 boxed" id="_features"><span>FEATURES</span></h4>
+          </div>
+        </div>
+      
+      <div class="row equal mt-4 py-3 px-0 mx-0 homeContBlock mbr-parallax-background cid-qIoZwj9I6L" data-jarallax-original-styles="null" 
+        style="z-index: 0; position: relative; background-image: none; background-attachment: scroll; background-size: auto;color: #eee; background-color: rgba(0,0,0,.1);">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 pb-3 homeContBlock">
+                <div class="holder1 wow fadeInLeft bg-brick1 d-block text-center px-3 py-3 ">
+                  <div class="holder-icon1 text-center pb-4">
+                    <span class="button-wrapper mb-2"><span class="fas fa-window-restore medium-icon"></span></span>
+                    <h4 class="feature-header">Client Interface</h4>
+                  </div>
+                  <span class="fancy-text1 text-justify">We think data protection is important! No data is sent to the server. The magic happens in your browser. This tool uses native javascript and runs only on client browser.</span>
+                </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 pb-3 homeContBlock">
+           
+                <div class="holder1 wow fadeInLeft bg-bric1k d-block px-1 py-2">
+                  <div class="holder-icon1 text-center pb-4">
+                    <span class="button-wrapper mb-2"><span class="fas fa-chart-bar medium-icon"></span></span>
+                    <h4 class="feature-header">Impressive Charts</h4>
+                  </div>
+                  <span class="fancy-text1 text-justify">This tool displays the SAR file output into an impressive graphical chart layout. There is option to zoom in/out the chart, especially needed when data got narrowed down due to screen width.</span>
+                 </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 pb-3 homeContBlock">
+            
+          <div class="holder1 wow fadeInLeft bg-brick1 d-block px-1 py-2">
+            <div class="holder-icon1 text-center pb-4">
+              <span class="button-wrapper mb-2"><span class="fas fa-print medium-icon"></span></span>
+              <h4 class="feature-header">Export Charts</h4>
+            </div>
+            <span class="fancy-text1 text-justify">This tool allows you to generate and download charts. This feature is not available in this standalone version. Please use the online version in the website (https://sarchart.dotsuresh.com). </span>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="row equal py-0 mt-5 mx-0 section-header homeContBlock">
+        <div class="col-lg-12 text-center my-0 py-0">
+          <h4 class="my-0 py-0 boxed" id="_description"><span>DESCRIPTION</span></h4>
+        </div> 
+      </div>
+      <div class="row equal py-3 mx-0">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 py-2 homeContBlock">
+            <div class="card card-blur card-block contDash1 no-border roundborder">
+              <div class="card-header with-no-border h-0">
+                <i class="fa fa-question-circle"></i>&nbsp;
+                <h3 class="card-title">WHAT IS SARCHART</h3>
+              </div>
+              <div class="card-body">
+                <div class="holder1 wow fadeInLeft bg-brick1 d-block text-center px-3 py-2 ">
+                  <span class="fancy-text1 text-justify">SARchart is an online tool to view the performance of a Unix server
+                    using the SAR (System Activity Report) output in an impressive graphical chart layout.</span>
+                </div>
+             </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 py-2 homeContBlock">
+            <div class="card card-blur card-block contDash1 no-border roundborder">
+                  <div class="card-header with-no-border">
+                    <i class="fa fa-hand-point-right"></i>&nbsp;
+                    <h3 class="card-title">PROVIDES</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="holder1 wow fadeInLeft bg-brick1 d-block px-1 py-2">
+                      <span class="fancy-text1 text-justify">This tool displays graphs for multiple days to a server. Also
+                        provides information of Peak CPU/Load/Memory/IO in the dashboard. The tool helps you view the charts
+                        on CPU, Memory, Load, Run Queue, Swap usage, Processes, Contexts, Interrupts, Paging, NFS, Sockets
+                        etc. of a server in graphical layout. </span>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 py-2 homeContBlock">
+            <div class="card card-blur card-block contDash1 no-border roundborder">
+              <div class="card-header with-no-border">
+                <i class="fas fa-hand-holding-water"></i>&nbsp;
+                <h3 class="card-title">SUPPORTS</h3>
+              </div>
+              <div class="card-body">
+                <div class="holder1 wow fadeInLeft bg-bric1k d-block px-1 py-2">
+                  <span class="fancy-text1 text-justify1">Currently this tool supports the following OS: </span>
+                  <ul>
+                    <li>Linux - RHEL/SuSE/Ubuntu</li>
+                    <li>Solaris</li>
+                    <li>AIX</li>
+                  </ul>
+                 </div>
+               </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="row py-0 my-0 mx-1 contABlock section-header homeContBlock">
+        <div class="col-lg-12 text-center my-0 py-0">
+          <h4 class="my-0 py-0 boxed"><span id="pageTitle"></span></h4>
+        </div>
+      </div>
+
+
+        <div class="row equal py-0 mt-2 mx-1 section-header homeContBlock clouds">
+          <div class="col-lg-12 text-center my-0 py-0">
+            <h4 class="my-0 py-0 boxed" id="_howto"><span>HOW TO</span></h4>
+          </div>
+        </div>
+
+
+
+        <div class="row mt-3 py-3 mx-0">
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 homeContBlock">
+            <div class="card card-blur card-block contDash1 roundborder">
+              <div class="card-header with-border">
+                <i class="fa fa-download"></i>
+                <h3 class="card-title" id="_howto">HOW TO GENERATE SAR FROM SERVER</h3>
+              </div>
+              <div class="card-body">
+                <div class="paragraph text-left" style="text-align:left;">
+                  <span>Login as root (or with sudo) access run the following commands to fetch the sar output for a
+                    specific date or multiple dates.</span><br><br>
+                  <font color="#ccc" size="3">Example:</font><span>
+                  </span><br>
+
+                  <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#_linux">LINUX</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#_aix">AIX</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#_solaris">SOLARIS</a>
+                  </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content"><br>
+                  <div id="_linux" class="container1 tab-pane active">
+                    <font size="3">For single day file:</font>
+                    <div class="code-block">                      
+                      <span>sar -A -f /var/log/sa/sa<span class="tdate"></span> &gt; /tmp/sa<span
+                          class="tdate"></span>_$(uname -n).txt</span>
+                    </div>
+                    <font size="3">For multiple days files:</font><br>
+                    <div class="code-block">
+                        ls /var/log/sa/sa?? | xargs -i sar -A -f {} &nbsp;&gt;&nbsp; /tmp/sar_$(uname -n).txt</font> <br>
+                    </div>
+
+                  </div>
+                  <div id="_aix" class="container1 tab-pane fade">
+                    <font size="3">For single day file:</font>
+                    <div class="code-block">
+                      <span>sar -A -f /var/adm/sa/sa<span class="tdate"></span> &gt; /tmp/sa<span
+                          class="tdate"></span>_$(uname -n).txt</span></div>
+                    <font size="3">For multiple days files:</font><br>
+                    <div class="code-block">
+                        ls /var/adm/sa/sa?? | xargs -i sar -A -f {} &nbsp;&gt;&nbsp; /tmp/sar_$(uname -n).txt</font> <br>
+                    </div>
+                  </div>
+                  <div id="_solaris" class="container1 tab-pane fade">
+                    <font size="3">For single day file:</font>
+                    <div class="code-block">
+                      <span>sar -A -f /var/log/sysstat/sa<span class="tdate"></span> &gt; /tmp/sa<span
+                          class="tdate"></span>_$(uname -n).txt</span></div>
+                    <font size="3">For multiple days files:</font><br>
+                    <div class="code-block">
+                        ls /var/log/sysstat/sa/sa?? | xargs -i sar -A -f {} &nbsp;&gt;&nbsp; /tmp/sar_$(uname -n).txt</font> <br>
+                    </div>
+                  </div>
+                </div>
+
+                </div>     
+
+              </div>
+            </div>
+          </div>
+          
+          <!-- Begin Server Info box -->
+          <div class="col-fluid col-lg-6 col-md-12 col-sm-12 col-xs-12 homeContBlock">
+            <div class="card card-blur card-block contDash1 roundborder-inv">
+              <div class="card-header card-header-inv with-border">
+                <i class="fa fa-download"></i>
+                <h3 class="card-title">DOWNLOAD SAR FILE TO DESKTOP</h3>
+              </div>
+              <div class="card-body">
+                <div class="paragraph" style="text-align:left;">
+                  <span>Use any SCP software like Winscp/Filezilla/pscp/psftp to download the file from the server. Many prefer to use&nbsp;<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html" style="color:pink">pscp</a> command to download the files from Unix server to the desktop.</span><br><br>
+                  <div class="code-block"> pscp userid@hostname:/tmp/sa<span class="tdate"></span>_hostname.txt .</div><br><br><br></div>
+              </div>
+            </div>  
+          </div>
+        </div>
+
+           
+        <!-- Containers -->
+        <div class="row px-0">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 contABlock pr-4 py-3">
+            <div class="card card-primary with-no-border roundborder" style="border-radius: 20px;">
+              <div class="card-body-chart">
+                <div class="" id="containerA" style="padding:20px; margin:-10px 15px;"></div>
+                <p id="containerANotes" class="card-footer container-notes"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contBBlock pr-4 py-3">
+            <div class="card card-primary with-no-border roundborder" style="border-radius: 20px;">
+              <div class="card-body-chart roundborder align-items-center" style="background-color: white; border-radius: 20px;">
+                <div class="" id="containerB" style="padding:20px; margin:-10px 15px; height:auto;"></div>
+                <p id="containerBNotes" class="card-footer container-notes"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contCBlock pr-4 py-3">
+            <div class="card card-primary with-no-border roundborder20">
+              <div class="card-body-chart align-items-center">
+                <div class="" id="containerC" style="padding:20px; margin:-10px 15px; height:auto;"></div>                
+                <p id="containerCNotes" class="card-footer container-notes"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contDBlock pr-4 py-3">
+            <div class="card card-primary with-no-border roundborder20">
+              <div class="card-body-chart align-items-center">
+                <div class="" id="containerD" style="padding:20px; margin:-10px 15px; height:auto;"></div>
+                <p id="containerDNotes" class="card-footer container-notes"></p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contMBlock pr-4 py-3">
+            <div class="card card-primary with-no-border roundborder20">
+              <div class="card-body-chart">
+                <h5 class="container-title text-center mx-auto border-bottom py-2" id="containerMTitle" style="background-color: rgba(12, 43, 49, .95); color: #eee;
+                text-shadow: #416e7e 1px 1px 0;border-width:0px;border-top-left-radius: 18px; border-top-right-radius: 18px;">&nbsp;</h5>
+                <div class="" id="containerM" style="color: white;padding:20px; margin:-10px 15px; height:auto;"></div>
+                <p id="containerMNotes" class="card-footer container-notes"></p>
+              </div>
+            </div>
+          </div>
+        </div>    
+
+
+            
+        </section>
+
+
+        <div class="row equal py-0 mt-2 mx-3 px-1 section-header homeContBlock">
+          <div class="col-lg-12 text-center my-0 py-0">
+            <h4 class="my-0 py-0 boxed" id="_faq"><span>FAQ</span></h4>
+          </div>
+        </div>
+
+
+        <div class="row equal py-3 mx-0">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 pb-3 homeContBlock">
+            <div class="card1 card-blur card-block contDash1 no-border roundborder">
+              <div class="card-header1 with-no-border h-0">
+              </div>
+
+              <div class="card-body1 mx-0 my-2">
+                <div class="wow1 fadeInLeft1 text-center1 px-3 py-2 d-block d-flex1 flex-wrap1 justify-content-between1">
+                  <div class="tab-pane show active" id="tab1" role="tabpanel" aria-labelledby="tab1">
+                    <div class="accordion d-flex row" id="accordion-tab-1">
+                      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 pb-3 w-100 homeContBlock">
+                        <div class="faq-card">
+                          <div class="faq-card-header" id="accordion-tab-1-heading-1">
+                            <h5>
+                              <button class="btn btn-link" type="button" data-toggle="collapse"
+                                  data-target="#accordion-tab-1-content-1" aria-expanded="false"
+                                  aria-controls="accordion-tab-1-content-1">What are the Operating Systems (OS) that are supported by the tool?</button>
+                            </h5>
+                          </div>
+                            <div class="collapse" id="accordion-tab-1-content-1"
+                              aria-labelledby="accordion-tab-1-heading-1" data-parent="#accordion-tab-1">
+                              <div class="faq-card-body text-justify p-3">
+                                <p><span class="fancy-text1 text-justify1">Currently this tool supports the following
+                                    OS: </span>
+                                  <ul>
+                                    <li>Linux - RHEL/SuSE/Ubuntu</li>
+                                    <li>Solaris</li>
+                                    <li>AIX</li>
+                                  </ul>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="faq-card">
+                            <div class="faq-card-header" id="accordion-tab-1-heading-2">
+                              <h5>
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                  data-target="#accordion-tab-1-content-2" aria-expanded="false"
+                                  aria-controls="accordion-tab-1-content-2"> How to use the tool?</button>
+                              </h5>
+                            </div>
+                            <div class="collapse" id="accordion-tab-1-content-2"
+                              aria-labelledby="accordion-tab-1-heading-2" data-parent="#accordion-tab-1">
+                              <div class="faq-card-body text-justify p-3">
+                                <p>
+                                  <ul>
+                                    <li>Create a SAR output as a text file from the Unix server.</li>
+                                    <li>Download the SAR text file to the desktop</li>
+                                    <li>Upload the SAR text file to this site.</li>
+                                    <li>The site will create all the charts.</li>
+                                  </ul>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="faq-card">
+                            <div class="faq-card-header" id="accordion-tab-1-heading-3">
+                              <h5>
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                  data-target="#accordion-tab-1-content-3" aria-expanded="false"
+                                  aria-controls="accordion-tab-1-content-3">Will the tool support multiple days of input
+                                  SAR data ?</button>
+                              </h5>
+                            </div>
+                            <div class="collapse" id="accordion-tab-1-content-3"
+                              aria-labelledby="accordion-tab-1-heading-3" data-parent="#accordion-tab-1">
+                              <div class="faq-card-body text-justify p-3">
+                                <p>Yes. Just upload the SAR data file into the tool and hold on for 30 seconds to 3
+                                  minutes for the tool to process the input file. The time may vary based on the size of
+                                  the input SAR data file</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 pb-3 w-100 homeContBlock">
+
+                          <div class="faq-card">
+                            <div class="faq-card-header" id="accordion-tab-1-heading-4">
+                              <h5>
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                  data-target="#accordion-tab-1-content-4" aria-expanded="false"
+                                  aria-controls="accordion-tab-1-content-4">Why Export Charts is not available in this version?</button>
+                              </h5>
+                            </div>
+                            <div class="collapse" id="accordion-tab-1-content-4"
+                              aria-labelledby="accordion-tab-1-heading-4" data-parent="#accordion-tab-1">
+                              <div class="faq-card-body text-justify p-3">
+                                <p>For generating charts as PDF the data will be sent to highcharts website. Since this is offline/standalone version, we disabled that feature.</p>
+                                <p>When you upload the SAR file into the tool, this will parse and present the data into impressive charts that are viewed by clicking on the corresponding tabs on the left side</p>
+                                <p>
+                                  <span class="homeContainer align-items-center text-left mx-3">
+                                    This tool provides the following features:
+                                    <ul>
+                                      <li>Tool runs only on Client browser</li>
+                                      <li>Stunning charts</li>
+                                      <li>Fast and accurate results</li>
+                                      <li>Export Charts as PDF report (Use online version)</li>
+                                    </ul><br>
+                                  </span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="faq-card">
+                            <div class="faq-card-header" id="accordion-tab-1-heading-5">
+                              <h5>
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                  data-target="#accordion-tab-1-content-5" aria-expanded="false"
+                                  aria-controls="accordion-tab-1-content-5">Can I contribute to this tool to enhance the feature or report a bug?</button>
+                              </h5>
+                            </div>
+                            <div class="collapse" id="accordion-tab-1-content-5"
+                              aria-labelledby="accordion-tab-1-heading-5" data-parent="#accordion-tab-1">
+                              <div class="faq-card-body text-justify p-3">
+                                <p>You can reach out to the author of the tool (Suresh Raju) via Github page <a href="https://github.com/sargraph/sargraph.github.io"><u>https://github.com/sargraph/sargraph.github.io</u>. Create an issue.</a></p>
+                                <p>Note: When you are reporting a bug please mention the version of the tool, which can be found at the bottom the page above footer</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="faq-card">
+                            <div class="faq-card-header" id="accordion-tab-1-heading-6">
+                              <h5>
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                  data-target="#accordion-tab-1-content-6" aria-expanded="false"
+                                  aria-controls="accordion-tab-1-content-6"> Want to give feedback or Donate to the Tool?</button>
+                              </h5>
+                            </div>
+                            <div class="collapse" id="accordion-tab-1-content-6"
+                              aria-labelledby="accordion-tab-1-heading-6" data-parent="#accordion-tab-1">
+                              <div class="faq-card-body text-justify p-3">
+                                <p>There are many ways you can reach the author/developer of the tool.
+                                  <ul>
+                                    <li><a href="https://sarchart.dotsuresh.com/#_contactus">https://sarchart.dotsuresh.com/#_contactus</a></li>
+                                    <li><a href="https://github.com/sargraph/sargraph.github.io">Star the Github page -> <u>https://github.com/sargraph/sargraph.github.io</u></a></li>
+                                    <li><a href="https://dotsuresh.com/#contact">https://dotsuresh.com/#contact</a></li>
+                                    <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=iamrsuresh%40gmail.com&item_name=SARchart&currency_code=USD&source=url" target="_blank"> <i class="fas fa-donate"></i> Donate </a> </li>
+                                  </ul>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      
+
+        <div class="container">
+         <div class="row">
+          <div class="d-flex flex-row align-items-center mx-auto">
+            <a href="https://dotsuresh.com" target="_blank" class="btn btn-app export d-flex flex-column dash-btn" id="btnAbout"> <i class="fa fa-address-card"></i> About us</a>
+            <a href="https://github.com/sargraph/sargraph.github.io" target="_blank" class="btn btn-app export d-flex flex-column dash-btn" id="btnGithub"> <i class="fab fa-github"></i> Github </a>
+            <a href="https://dotsuresh.com/#contact" target="_blank" class="js-open btn-open is-active btn btn-app export d-flex flex-column dash-btn" id="btnContactUs"> <i class="fa fa-envelope"></i> Contact us </a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=iamrsuresh%40gmail.com&item_name=SARchart&currency_code=USD&source=url" target="_blank" class="btn btn-app export d-flex flex-column dash-btn" id="btnDonate"> <i class="fas fa-donate"></i> Donate </a>                                  
+          </div>
+         </div>
+        </div>
+
+        <div class="row py5 my5">&nbsp;</div>
+        <div class="row mx-auto"><span class="mx-auto" style="font-size:12px; font-family: Metrophobic; color: #ccc;">[Version - 5.1.3]</span></div>
+        {{!-- <footer class="footer fixed-bottom text-center py-3 mt-3 mx-0 px-0" style="background-color: rgba(0,0,0,.4); color: white; position: relative; bottom: -20px; border-radius: 5rem 5rem 0 0">&copy; 2016 - <span class="tyear"></span> dotsuresh.com - All rights reserved</footer> --}}
+        {{>footer}}
+    </div>

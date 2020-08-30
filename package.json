@@ -1,0 +1,20 @@
+{
+  "name": "sarchart-web-server",
+  "version": "5.1.3",
+  "description": "SARchart - A tool to view Unix SAR data as Charts",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js -e js,hbs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {}
+}
