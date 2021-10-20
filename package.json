@@ -13,9 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "hbs": "^4.1.1",
+    "hbs": "^4.1.2",
     "ini": "^1.3.8",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "handlebars": ">=4.7.7",
+    "ansi-regex": ">=5.0.1"
   },
   "devDependencies": {}
 }
