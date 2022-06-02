@@ -42,7 +42,7 @@ The steps involved in generating the SAR Graph are as follows:
 
 1. Create a SAR output as a text file from the Unix server.
   + Login as root or with sudo access run the following commands to fetch the sar output for a specific date. Example:
-  ```shell
+  ```bash
   #LINUX
   # Generate file for single day:
   sar -A -f /var/log/sa/sa19 > /tmp/sa19_$(hostname).txt
