@@ -83,6 +83,15 @@ The steps involved in generating the SAR Graph are as follows:
 - The site will be available on default port 3000. http://localhost:3000/
 - Enjoy!
 
+## How to run this offline in Docker
+- Clone/Download this repository
+```docker
+docker build -t sarchart .
+docker run -dp 3000:3000 sarchart
+docker run -it sarchart bash
+```
+- The site will be available on default port 3000. `http://<docker-default-machine-ip>:3000/`
+
 ## Website Links
 [SAR Chart](https://sarchart.dotsuresh.com)
 
