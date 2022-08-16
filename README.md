@@ -86,6 +86,9 @@ The steps involved in generating the SAR Graph are as follows:
 ## Website Links
 [SAR Chart](https://sarchart.dotsuresh.com)
 
+## Contributors
+- Adam Kaminski - @thimslugga - 2022-08-16 added Dockerfile and justfile
+
 ## Author
 [Suresh Raju](https://dotsuresh.com)<br>
 copyright 2016 - 2022
